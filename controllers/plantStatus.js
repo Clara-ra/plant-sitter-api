@@ -5,7 +5,7 @@ module.exports = {
     getPlantStatus: async (req,res)=>{
         console.log(`requested plant data for ${req.params.id}`)
         try{
-            const plantData = await PlantStatus.find({ plantid: req.params.id })
+            const plantData = await PlantStatus.find({ plant: req.params.id })
             res.json(plantData)
         }catch(err){
             console.log(err)
