@@ -7,25 +7,31 @@ This is an application that monitors the temperature, humidity, light intensity,
 
 This is a full-stack web application that is broken up across a few different repositories.
 
-For the **front-end portion**, go **[here.]** (https://github.com/Clara-ra/plant-sitter-client)
+For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
 React must be setup to run the client. It can be started by running the following -
-> npm start
 
-For the **back-end portion**, go **[here.]** (https://github.com/Clara-ra/plant-sitter-api)
+`npm start`
+
+For the **back-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-api)
 Node is neccessary to set up the back-end. Once cloned, make sure to install the neccessary packages -
-> npm install
+
+`npm install`
 
 Before the server can be run, an environment file needs to be set up. under config, create a ".env" file -
-> touch config/.env
+
+`touch config/.env`
 
 This server relies on using MongoDB. In your environment file, store your connectionURI in the DB_STRING variable.
 You can also set your port in this file. I use 8000, but you can set it to be whatever you want -
 
-> DB_STRING = connectionURI-here
-> PORT = 8000
+```
+DB_STRING = connectionURI-here
+PORT = 8000
+```
 
-For the **data collection**, go **[here.]** (https://github.com/Clara-ra/plant-sitter-data-collection)
+For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection)
 The data collection is run on a raspberry pi with various sensors connected.
+
 **Hardware used** 
 - BH1750 Light Sensor
 - HTU31 Temperature and Humidity Sensor
