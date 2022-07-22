@@ -1,7 +1,6 @@
 
 # Plant Monitor
 
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 This is an application that monitors the temperature, humidity, light intensity, and soil moisture conditions for your plants. The data can be easily viewed, allowing you to notice any patterns that may be helping or hindering your plants. 
 
 # Setting up project
