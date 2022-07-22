@@ -57,13 +57,24 @@ The data collection is run on a raspberry pi with various sensors connected.
 - HTU31 Temperature and Humidity Sensor
 - Capacitive Moisture Sensor
 - PCF8591 (For Analog to Digital Conversion. Not neccessary if all three sensors have digital output.)
-- Raspberry Pi 4b with Python3 installed.
+- Raspberry Pi 4b with Python3 installed and connected to the internet.
 
 **Software needed**
 - Circuit Python( Setup [here](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi))
 - BH1750 Module ( Repository [here](https://github.com/adafruit/Adafruit_CircuitPython_BH1750) )
 - HTU21D Module ( Repository [here](https://github.com/adafruit/Adafruit_CircuitPython_HTU21D) )
 - PCF8591 Module ( Resporistory [here](https://github.com/adafruit/Adafruit_CircuitPython_PCF8591) )
+
+**Hardware Setup**
+The following HTU31, BH1750, and PCF8591 sensors all use i2c communication. These can be connected to eachother. The Capasitive Moisture sensor connects to PCF8591, as it outputs the analog. I used the following setup :
+
+|                |Vcc          |         |Vcc---- Vcc |       |Vcc---- Vcc|        |Vcc----- 5V  |           |
+| Moisture Sensor|Aout ----- A0| PCF8591 |SCL---- SCL | HTU31 |SCL---- SCL| BH1750 |SCL----- SCL | Raspberry |
+|                |Gnd          |         |SDA---- SDA |       |SDa---- SDA|        |SDA----- SDA |    Pi     |
+|                |             |         |Gnd---- Gnd |       |Gnd---- Gnd|        |Gnd----- Gnd |           |
+
+**Software Setup**
+Download the software listed above. Then the environment must be setup to ensure the client can access the server.
 
 ## How It's Made:
 
