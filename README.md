@@ -15,7 +15,7 @@ For the **back-end portion**, go **[here.]** (https://github.com/Clara-ra/plant-
 Node is neccessary to set up the back-end. Once cloned, make sure to install the neccessary packages -
 > npm install
 
-Before the server can be run, the an environment file needs to be set up. under config, create a ".env" file -
+Before the server can be run, an environment file needs to be set up. under config, create a ".env" file -
 > touch config/.env
 
 This server relies on using MongoDB. In your environment file, store your connectionURI in the DB_STRING variable.
