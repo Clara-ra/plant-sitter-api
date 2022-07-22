@@ -9,6 +9,7 @@ This is a full-stack web application that is broken up across a few different re
 
 ---
 For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
+
 React must be setup to run the client. It uses an environment variable to define the server's URL. To adjust the this URL, edit the .env file in the root folder -
 
 ```
@@ -25,6 +26,7 @@ However, the client alone is not enough. The back-end must be set up as well.
 
 ---
 For the **back-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-api)
+
 Node is neccessary to set up the back-end. Once cloned, make sure to install the neccessary packages -
 
 `npm install`
@@ -45,6 +47,7 @@ To create the data used by the database, data collection needs to be set up as w
 
 ---
 For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection) **TBD Repository not uploaded currently**
+
 The data collection is run on a raspberry pi with various sensors connected.
 
 **Hardware used** 
