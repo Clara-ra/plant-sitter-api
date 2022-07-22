@@ -76,7 +76,7 @@ The server utilizes Node and Express. It listens for any requests coming from th
 
 My instance of the database is hosted on MongoDB Atlas so that it can be accessed from anywhere. It has two collections - a plant collection, and a plantStatus collection. The plants contain the name of the plant, the location of the plant, and any potential issues the plant may be experiencing. The plantStatus collection is comprised of datapoints. Each datapoint contains a timestamp, lux reading, temperature, humidity, moisture reading, and a reference to the ID of the plant the data is associated with. 
 
-The client is bootstapped using React. It fetches the list of plants from the server and displays them. This list is kept as a state within the App component. When a plant is clicked, the selected plant is also stored within a state for easy reference later. The client sends a request for all datapoints associated with the plant, and the data is displayed using chart.js. The various fetches made to the server are kept in react hooks such as useEffect to ensure they are triggered at the right time (e.g. initial page load).
+The client is bootstapped with [React](https://github.com/facebook/create-react-app). It fetches the list of plants from the server and displays them. This list is kept as a state within the App component. When a plant is clicked, the selected plant is also stored within a state for easy reference later. The client sends a request for all datapoints associated with the plant, and the data is displayed using chart.js. The various fetches made to the server are kept in react hooks such as useEffect to ensure they are triggered at the right time (e.g. initial page load).
 
 ## Optimizations
 
