@@ -9,9 +9,19 @@ This is a full-stack web application that is broken up across a few different re
 
 ---
 For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
-React must be setup to run the client. It can be started by running the following -
+React must be setup to run the client. It uses an environment variable to define the server's URL. To adjust the this URL, edit the .env file in the root folder -
+
+```
+REACT_APP_API_URL = http://localhost:8000
+```
+
+By default, it is set to listen at port 8000, as the server starts running here by default. Change this as needed.
+
+The client can be started by running the following -
 
 `npm start`
+
+However, the client alone is not enough. The back-end must be set up as well.
 
 ---
 For the **back-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-api)
@@ -24,15 +34,17 @@ Before the server can be run, an environment file needs to be set up. under conf
 `touch config/.env`
 
 This server relies on using MongoDB. In your environment file, store your connectionURI in the DB_STRING variable.
-You can also set your port in this file. I use 8000, but you can set it to be whatever you want -
+You can also set your port in this file. Keep in mind that your client needs to know what the server's URL is. I use port 8000, but you can set it to be whatever you want -
 
 ```
 DB_STRING = connectionURI-here
 PORT = 8000
 ```
 
+To create the data used by the database, data collection needs to be set up as well.
+
 ---
-For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection)
+For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection) **TBD Repository not uploaded currently**
 The data collection is run on a raspberry pi with various sensors connected.
 
 **Hardware used** 
