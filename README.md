@@ -10,24 +10,7 @@ This is an application that monitors the temperature, humidity, light intensity,
 This is a full-stack web application that is broken up across a few different repositories.
 
 ---
-For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
-
-React must be setup to run the client. It uses an environment variable to define the server's URL. To adjust the this URL, edit the .env file in the root folder -
-
-```
-REACT_APP_API_URL = http://localhost:8000
-```
-
-By default, it is set to listen at port 8000, as the server starts running here by default. Change this as needed.
-
-The client can be started by running the following -
-
-`npm start`
-
-However, the client alone is not enough. The back-end must be set up as well.
-
----
-For the **back-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-api)
+This repository is the **back-end portion**. To grab the rest, see below.
 
 Node is neccessary to set up the back-end. Once cloned, make sure to install the neccessary packages -
 
@@ -46,6 +29,23 @@ PORT = 8000
 ```
 
 To create the data used by the database, data collection needs to be set up as well.
+
+---
+For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
+
+React must be setup to run the client. It uses an environment variable to define the server's URL. To adjust the this URL, edit the .env file in the root folder -
+
+```
+REACT_APP_API_URL = http://localhost:8000
+```
+
+By default, it is set to listen at port 8000, as the server starts running here by default. Change this as needed.
+
+The client can be started by running the following -
+
+`npm start`
+
+However, the client alone is not enough. The back-end must be set up as well.
 
 ---
 For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection) **TBD Repository not uploaded currently**
