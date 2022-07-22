@@ -7,11 +7,13 @@ This is an application that monitors the temperature, humidity, light intensity,
 
 This is a full-stack web application that is broken up across a few different repositories.
 
+---
 For the **front-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-client)
 React must be setup to run the client. It can be started by running the following -
 
 `npm start`
 
+---
 For the **back-end portion**, go [here.](https://github.com/Clara-ra/plant-sitter-api)
 Node is neccessary to set up the back-end. Once cloned, make sure to install the neccessary packages -
 
@@ -29,6 +31,7 @@ DB_STRING = connectionURI-here
 PORT = 8000
 ```
 
+---
 For the **data collection**, go [here.](https://github.com/Clara-ra/plant-sitter-data-collection)
 The data collection is run on a raspberry pi with various sensors connected.
 
