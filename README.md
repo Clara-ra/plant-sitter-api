@@ -66,15 +66,26 @@ The data collection is run on a raspberry pi with various sensors connected.
 - PCF8591 Module ( Resporistory [here](https://github.com/adafruit/Adafruit_CircuitPython_PCF8591) )
 
 **Hardware Setup**
-The following HTU31, BH1750, and PCF8591 sensors all use i2c communication. These can be connected to eachother. The Capasitive Moisture sensor connects to PCF8591, as it outputs the analog. I used the following setup :
 
-|                |Vcc          |         |Vcc---- Vcc |       |Vcc---- Vcc|        |Vcc----- 5V  |           |
-| Moisture Sensor|Aout ----- A0| PCF8591 |SCL---- SCL | HTU31 |SCL---- SCL| BH1750 |SCL----- SCL | Raspberry |
-|                |Gnd          |         |SDA---- SDA |       |SDa---- SDA|        |SDA----- SDA |    Pi     |
-|                |             |         |Gnd---- Gnd |       |Gnd---- Gnd|        |Gnd----- Gnd |           |
+The  HTU31, BH1750, and PCF8591 sensors all use i2c communication. Thus, these can be connected to eachother. The Capasitive Moisture sensor connects to PCF8591, as it outputs the analog. I used the following setup :
+
+```mermaid
+graph TD;
+    Moisture_Sensor--Aout to A0 Vcc to Vcc Gnd to Gnd-->PCF8591;
+    PCF8591--SCL to SCL SDA to SDA Vcc to Vcc Gnd to Gnd-->HTU31;
+    HTU31--SCL to SCL SDA to SDA Vcc to Vcc Gnd to Gnd-->BH1750;
+    BH1750--SCL to SCL SDA to SDA Vcc to Vcc Gnd to Gnd-->Raspberry_Pi;
+```
 
 **Software Setup**
+
 Download the software listed above. Then the environment must be setup to ensure the client can access the server.
+
+To begin data collection, run the following -
+
+`python client.py`
+
+Follow the prompts that appear.
 
 ## How It's Made:
 
