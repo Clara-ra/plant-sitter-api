@@ -3,6 +3,8 @@
 
 This is an application that monitors the temperature, humidity, light intensity, and soil moisture conditions for your plants. The data can be easily viewed, allowing you to notice any patterns that may be helping or hindering your plants. 
 
+![](plant-monitor.gif)
+
 # Setting up project
 
 This is a full-stack web application that is broken up across a few different repositories.
